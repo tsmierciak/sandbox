@@ -9,6 +9,6 @@ Serves the purpose of
   * more exercises
   
 ## Section three
-Made to edit readme
+Made to edit readme file
   
 
