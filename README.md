@@ -9,6 +9,7 @@ Serves the purpose of
   * more exercises
   
 ## Section three
-Readme file actualized
+ 1. Readme file updated
+ 2. Readme file updated again
   
 
