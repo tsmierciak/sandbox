@@ -1,0 +1,38 @@
+Plan:
+28.10-3.11
+-podstawowy syntax pythona *
+-definiowanie funkcji *
+
+siatka_max.py - programik znajduj¹cy maksymaln¹ wartoœæ funkcji na siatce i jej lokalizacjê *
+
+4.11-10.11    6.11
+-obs³uga programów z wiersza poleceñ *
+
+modyfikacja square_grid.py do dzia³ania z wierszem poleceñ *
+
+11.11-17.11
+-plotowanie za pomoc¹ biblioteki matplotlib
+-przechowywanie danych w tablicach
+
+plotowanie wykresów i siatek w 3d
+programik do obliczeñ momentu krytycznego p³yty z obs³ug¹ wiersza poleceñ
+ 
+18.11-24.11   20.11
+-pêtle w pythonie
+
+programik do MES z zastosowaniem pêtli (poziom trudnoœci do dopasowania)
+
+25.11-1.12
+
+...
+
+
+Literatura i strony internetowe:
+-codeacademy.com
+-learnpython.org
+
+Inne problemy do zg³êbienia:
+-Programowanie obiektowe w pythonie
+-Python-parts w programie Allplan
+
+*-stan wykonania planu
