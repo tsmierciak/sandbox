@@ -21,11 +21,11 @@ def set_parser_arguments(parser):
     """Add specific command line arguments to the parser"""
     parser.add_argument('--angle', dest='ang', default=0, type=int,
                         help='Sets the rotation angle in degrees (default 0)')
-    parser.add_argument('--dimensions', dest='dim', default=(4, 4), type=tuple,
+    parser.add_argument('--dimensions', dest='dim', default="4, 4", type=str,
                         help='Sets the dimensions of the grid (default (4,4)')
 
 
-def show_square(grid_resolution=(5, 4), angle=0):
+def show_square(grid_resolution='5, 4', angle=0):
     """Draw Cartesian grid in a square [-1,1]x[1,1] rotated by given angle
     Parameters
     ----------
@@ -35,11 +35,12 @@ def show_square(grid_resolution=(5, 4), angle=0):
     angle
         rotation angle in degrees
     """
+    res = eval(grid_resolution)
+
     try:
-        res = grid_resolution * 2
         resolution = res[0:2]
     except TypeError:
-        resolution = (grid_resolution,) * 2
+        resolution = (res,) * 2
 
     fig, ax = plt.subplots()
     angle = np.deg2rad(angle)
