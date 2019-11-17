@@ -1,0 +1,37 @@
+
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib
+import math
+import pandas as pd
+
+
+data = pd.read_csv("polygon_data.csv", sep=",", header=[0])
+data = data.values
+print(data)
+
+r = data[:, 0]
+s = data[:, 1]
+xc = data[:, 2]
+yc = data[:, 3]
+
+"Finds vertex coordinates for a given polygon"
+def reg_poly(radius=4, sides=4, x=0, y=0):
+    xv = np.zeros(sides,)
+    yv = np.zeros(sides,)
+    for i in range(sides):
+        xv[i-1] = x + radius * np.cos(i * 2 * np.pi / sides)
+        yv[i-1] = y + radius * np.sin(i * 2 * np.pi / sides)
+    print(xv)
+    print(yv)
+    plt.plot(xv, yv)
+    plt.show()
+
+
+def plot_multiple():
+    for i in range(2):
+        reg_poly(r[i-1], s[i-1], xc[i-1], yc[i-1])
+
+
+if __name__ == '__main__':
+    plot_multiple()
