@@ -28,20 +28,21 @@ def m_poly():
     df = pd.DataFrame(data2)
     for i in range(len(r)):
         x, y = reg_poly(r[i-1], s[i-1], xc[i-1], yc[i-1])
+        x, y = np.around(x, 2), np.around(y, 2)
         data = {'X Coordinates': [x], 'Y Coordinates': [y]}
         df_temp = pd.DataFrame(data)
         df = df.append(df_temp)
     return df
 
 
-def export_data(path):
+def export_data(path, table):
     table.to_csv(path)
 
 
 if __name__ == '__main__':
-    table = m_poly()
-    export_data(r'export.csv')
-    print(table)
+    dataframe = m_poly()
+    export_data(r'export.csv', dataframe)
+    print(dataframe)
 
 
 
